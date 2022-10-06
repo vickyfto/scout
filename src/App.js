@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import BoxComponent from "./components/box";
+import FormSection from "./components/form";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* why i did this? when using gutter in idk why it push the container out and make a scrollbar in the very bottom page */}
+      {/* the point is it need container to wrap it up */}
+      <div style={{ width: "100%", overflow: "hidden" }}>
+        <BoxComponent />
+        <FormSection />
+      </div>
+    </>
   );
 }
 
